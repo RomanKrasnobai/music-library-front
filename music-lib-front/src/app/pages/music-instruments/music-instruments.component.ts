@@ -14,11 +14,11 @@ export class MusicInstrumentsComponent implements OnInit {
   data: object;
 
   ngOnInit(): void {
-    this.musicInstrumentsService.getMusicInstrumentById(1).pipe(
-      tap(items => {
-        this.data = items;
-      })
-    ).subscribe();
-    console.log(this.data);
+    // this.musicInstrumentsService.getMusicInstrumentById(1).pipe(
+    //   tap(items => {
+    //     this.data = items;
+    //   })
+    // ).subscribe();
+    // console.log(this.data);
   }
 }
