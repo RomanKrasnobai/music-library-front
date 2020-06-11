@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MusicInstrumentsService} from '../../services/music-instruments.service';
 import {tap} from 'rxjs/operators';
+import {MusicInstrumentModel} from '../../models/music-instrument.model';
 
 @Component({
   selector: 'app-music-instruments',
@@ -11,14 +12,13 @@ export class MusicInstrumentsComponent implements OnInit {
 
   constructor(private musicInstrumentsService: MusicInstrumentsService) { }
 
-  data: object;
+  musicInstruments: MusicInstrumentModel[];
 
   ngOnInit(): void {
-    // this.musicInstrumentsService.getMusicInstrumentById(1).pipe(
-    //   tap(items => {
-    //     this.data = items;
-    //   })
-    // ).subscribe();
-    // console.log(this.data);
+    this.musicInstrumentsService.getMusicInstruments().pipe(
+      tap(items => {
+        this.musicInstruments = items;
+      })
+    ).subscribe();
   }
 }

@@ -1,1 +1,3 @@
-<p>music-instruments works!</p>
+<div *ngFor="let item of musicInstruments">
+  <app-instrument [data]="item"></app-instrument>
+</div>
