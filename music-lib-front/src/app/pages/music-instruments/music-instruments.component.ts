@@ -16,9 +16,8 @@ export class MusicInstrumentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.musicInstrumentsService.getMusicInstruments().pipe(
-      tap(items => {
-        this.musicInstruments = items;
-      })
+      tap(items => this.musicInstruments = items
+      )
     ).subscribe();
   }
 }
