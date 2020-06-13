@@ -1,4 +1,12 @@
 .main-block {
   height: 100vh;
-  background-color: #d9d9d9;
+  box-shadow: -1px -3px 16px 9px #e6e6e6;
+
+  div:nth-child(2) > mat-accordion > mat-expansion-panel {
+    margin-top: 5px;
+  }
+
+  .category-name {
+    cursor: pointer;
+  }
 }

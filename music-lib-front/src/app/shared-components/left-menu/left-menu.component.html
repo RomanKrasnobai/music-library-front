@@ -1,4 +1,18 @@
 <div class="main-block">
-  <p>left-menu works!</p>
-  <div *ngFor="let category of categories">{{ category.name }}</div>
+  <div *ngFor="let category of categories">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ category.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <a class="category-name" (click)="setSelectedCategory(category)">
+          {{ category.name }}
+        </a>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>

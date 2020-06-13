@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CategoriesService} from '../../services/categories.service';
 import {CategoryModel} from '../../models/category.model';
 import {tap} from 'rxjs/operators';
@@ -9,6 +9,7 @@ import {tap} from 'rxjs/operators';
   styleUrls: ['./left-menu.component.scss']
 })
 export class LeftMenuComponent implements OnInit {
+  @Output() selectedCategory = new EventEmitter<CategoryModel>();
 
   constructor(private categoriesService: CategoriesService) { }
 
@@ -20,5 +21,9 @@ export class LeftMenuComponent implements OnInit {
         item => this.categories = item
       )
     ).subscribe();
+  }
+
+  setSelectedCategory(category) {
+    this.selectedCategory.emit(category);
   }
 }
