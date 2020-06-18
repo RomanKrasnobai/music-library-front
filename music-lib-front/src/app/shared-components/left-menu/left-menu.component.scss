@@ -9,4 +9,16 @@
   .category-name {
     cursor: pointer;
   }
+
+  .category-item {
+    padding: 10px;
+
+    &:hover {
+      color: #808080;
+    }
+  }
+
+  .selected-category {
+    border-bottom: #000000 1px solid;
+  }
 }

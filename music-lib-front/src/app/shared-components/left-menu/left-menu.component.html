@@ -1,18 +1,9 @@
 <div class="main-block">
-  <div *ngFor="let category of categories">
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            {{ category.name }}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-
-        <a class="category-name" (click)="setSelectedCategory(category)">
-          {{ category.name }}
-        </a>
-
-      </mat-expansion-panel>
-    </mat-accordion>
+  <div class="category-item cursor-pointer" *ngFor="let category of categories; let i = index">
+    <a (click)="setSelectedCategory(category, i)"
+       [ngClass]="{'selected-category': selected == i }"
+    >
+      {{ category.name }}
+    </a>
   </div>
 </div>

@@ -1,8 +1,8 @@
-<div class="main-block">
+<div class="main-block-wrapper">
   <div class="left-menu">
     <app-left-menu (selectedCategory)="setCategory($event)"></app-left-menu>
   </div>
-  <div>Your category:
+  <div class="main-block">Your category:
     <div>{{ showCategory?.name | uppercase }}</div>
   </div>
 </div>

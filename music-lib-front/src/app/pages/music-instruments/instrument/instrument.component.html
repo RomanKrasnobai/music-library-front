@@ -1,4 +1,13 @@
-<div>{{data.title}}</div>
-<div>{{data.description}}</div>
-<div>{{data.category}}</div>
-<img alt="error" [src]="data.image" />
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{data.title}}</mat-card-title>
+    <mat-card-subtitle>{{data.category_id}}</mat-card-subtitle>
+  </mat-card-header>
+  <img class="image" alt="error" [src]="data.image"/>
+  <mat-card-content>
+    <p>
+      {{data.description}}
+    </p>
+  </mat-card-content>
+</mat-card>

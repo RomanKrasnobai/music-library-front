@@ -14,6 +14,7 @@ export class LeftMenuComponent implements OnInit {
   constructor(private categoriesService: CategoriesService) { }
 
   categories: CategoryModel[];
+  selected;
 
   ngOnInit(): void {
     this.categoriesService.getAllCategories().pipe(
@@ -23,7 +24,8 @@ export class LeftMenuComponent implements OnInit {
     ).subscribe();
   }
 
-  setSelectedCategory(category) {
+  setSelectedCategory(category, i) {
     this.selectedCategory.emit(category);
+    this.selected = i;
   }
 }

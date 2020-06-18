@@ -1,8 +1,12 @@
-.main-block {
+.main-block-wrapper {
   display: flex;
-  width: 100%;
 
   .left-menu {
     width: 23%;
+  }
+
+  .main-block {
+    width: 100%;
+    padding: 10px;
   }
 }
