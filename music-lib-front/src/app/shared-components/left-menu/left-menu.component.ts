@@ -14,7 +14,7 @@ export class LeftMenuComponent implements OnInit {
   constructor(private categoriesService: CategoriesService) { }
 
   categories: CategoryModel[];
-  selected;
+  selected: number;
 
   ngOnInit(): void {
     this.categoriesService.getAllCategories().pipe(

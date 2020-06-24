@@ -3,7 +3,7 @@
     <a (click)="setSelectedCategory(category, i)"
        [ngClass]="{'selected-category': selected == i }"
     >
-      {{ category.name }}
+      {{ category.name | upperCaseFirstLetter }}
     </a>
   </div>
 </div>
