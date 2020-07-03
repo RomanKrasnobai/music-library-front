@@ -1,9 +1,13 @@
-<mat-form-field>
-  <mat-label>Enter your email</mat-label>
-  <input matInput placeholder="Enter name">
-</mat-form-field>
+<form [formGroup]="logInForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Enter your email</mat-label>
+    <input type="text" matInput formControlName="username" placeholder="Enter name">
+  </mat-form-field>
 
-<mat-form-field>
-  <mat-label>Enter your email</mat-label>
-  <input matInput placeholder="Enter password">
-</mat-form-field>
+  <mat-form-field>
+    <mat-label>Enter your email</mat-label>
+    <input type="text" matInput formControlName="password" placeholder="Enter password">
+  </mat-form-field>
+
+  <button>Log In</button>
+</form>
