@@ -5,6 +5,7 @@ import {RouterModule} from '@angular/router';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import {MatTreeModule} from '@angular/material/tree';
 import {UpperCaseFirstLetterPipe} from '../pipes/upper-case-first-letter.pipe';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {UpperCaseFirstLetterPipe} from '../pipes/upper-case-first-letter.pipe';
     CommonModule,
     RouterModule,
     MatTreeModule,
+    MatButtonModule,
   ],
   exports: [
     HeaderComponent,

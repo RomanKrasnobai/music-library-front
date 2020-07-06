@@ -22,7 +22,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    this.authService.signUp(this.logInForm.value);
+  signUp() {
+    this.authService.signUp(this.logInForm.value).subscribe();
+  }
+
+  signIn() {
+    this.authService.signIn(this.logInForm.value).subscribe();
   }
 }

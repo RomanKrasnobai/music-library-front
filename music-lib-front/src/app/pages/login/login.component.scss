@@ -1,9 +1,13 @@
 :host {
   display: flex;
+  justify-content: center;
+}
+.login-form {
+  display: flex;
   flex-direction: column;
   padding: 20px;
 
   .mat-form-field {
-    width: 35%;
+    //width: 35%;
   }
 }

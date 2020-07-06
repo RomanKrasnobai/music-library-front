@@ -7,5 +7,9 @@
       {{ 'music instruments' | uppercase }}
     </a>
   </div>
-  <a class="login-tab" routerLink="/login">Log in</a>
+  <a *ngIf="!currentUser; else logOut" class="login-tab" routerLink="/login">Log in</a>
+
+  <ng-template #logOut>
+    <button mat-raised-button (click)="signOut()">Log Out</button>
+  </ng-template>
 </div>
