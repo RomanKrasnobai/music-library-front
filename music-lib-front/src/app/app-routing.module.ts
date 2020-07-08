@@ -5,6 +5,10 @@ import {AuthGuard} from './services/guards/auth.guard';
 
 const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+  },
+  {
     path: 'music-instruments',
     loadChildren: () => import('./pages/music-instruments/music-instruments.module').then(m => m.MusicInstrumentsModule),
     canActivate: [AuthGuard]
@@ -15,8 +19,9 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule),
+    canActivate: [AuthGuard]
   },
   {
     path: '',

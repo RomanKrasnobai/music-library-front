@@ -6,6 +6,8 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
 import {MatTreeModule} from '@angular/material/tree';
 import {UpperCaseFirstLetterPipe} from '../pipes/upper-case-first-letter.pipe';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import {MatButtonModule} from '@angular/material/button';
     RouterModule,
     MatTreeModule,
     MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
   ],
   exports: [
     HeaderComponent,
