@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {ProfileComponent} from './profile.component';
 import {ProfileRoutingModule} from './profile-routing.module';
 import {SharedComponentsModule} from '../../shared-components/shared-components.module';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -12,6 +14,8 @@ import {SharedComponentsModule} from '../../shared-components/shared-components.
     CommonModule,
     ProfileRoutingModule,
     SharedComponentsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ]
 })
 export class ProfileModule { }
